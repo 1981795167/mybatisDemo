@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.PersonMapper">
+<resultMap type="bean.Person" id="personRM">
+<id property="id" column="ID"/>
+<result property="name" column="NAME"/>
+<result property="age" column="AGE"/>
+</resultMap>
+
+<select id="findAll" resultType="bean.Person">
+select * from person
+<where>
+<if test="name != null"> name = #{name} </if>
+<if test="age != 0"> and age = #{age} </if>
+</where>
+</select>
+
+<select id="get" parameterType="Integer" resultMap="personRM">
+select * from person where id=#{id}
+</select>
+
+<insert id="insert" parameterType="bean.Person">
+insert into person(id,name,age) values (#{id},#{name},#{age})
+</insert>
+
+<update id="update" parameterType="bean.Person">
+update person 
+<set>
+<if test="name != null">
+name=#{name},
+</if>
+<if test="age != null">
+age=#{age},
+</if>
+</set>  
+where id=#{id}
+</update>
+
+<delete id="deleteById" parameterType="Integer">
+delete from person 
+where id = #{id}
+</delete>
+</mapper>
