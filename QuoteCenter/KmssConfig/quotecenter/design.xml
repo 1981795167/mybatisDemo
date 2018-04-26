@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs
+	xmlns="http://www.example.org/design-config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/design-config ../../design.xsd ">
+
+	<module
+		messageKey="chenyee-quotecenter:module.chenyee.quotecenter"
+		urlPrefix="/chenyee/quotecenter/"
+		defaultValidator="roleValidator(role=ROLE_CHENYEEQUOTECENTER_DEFAULT)">
+		<roles>
+			ROLE_CHENYEEQUOTECENTER_DEFAULT;
+			ROLE_CHENYEEQUOTECENTER_PRODUCUT_VIEW;
+			ROLE_CHENYEEQUOTECENTER_PRODUCUT_EDIT;
+			ROLE_CHENYEEQUOTECENTER_HARDWARE_VIEW;
+			ROLE_CHENYEEQUOTECENTER_HARDWARE_EDIT;
+			ROLE_CHENYEEQUOTECENTER_PURCHASE_VIEW;
+			ROLE_CHENYEEQUOTECENTER_PURCHASE_EDIT;
+			ROLE_CHENYEEQUOTECENTER_SALE_VIEW;
+			ROLE_CHENYEEQUOTECENTER_SALE_EDIT;
+			ROLE_CHENYEEQUOTECENTER_SALE_LEADER_VIEW;
+			ROLE_CHENYEEQUOTECENTER_SALE_LEADER_EDIT;
+			ROLE_CHENYEEQUOTECENTER_BOSS;
+		</roles>
+
+		<request
+			path="chenyee_qc_cust_order/chenyeeQcCustOrder*"
+			validatorParameter="recid=fdId,model=com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcCustOrder">
+		</request>
+
+		<request
+			path="chenyee_qc_setpercent/chenyeeQcSetpercent*"
+			validatorParameter="recid=fdId,model=com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcSetpercent">
+		</request>
+
+		<request
+			path="chenyee_qc_hardware/chenyeeQcHardware*"
+			validatorParameter="recid=fdId,model=com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcHardware">
+		</request>
+
+		<request
+			path="chenyee_qc_apply/chenyeeQcApply*"
+			validatorParameter="recid=fdId,model=com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcApply">
+		</request>
+
+		<request
+			path="chenyee_qc_bom/chenyeeQcBom*"
+			validatorParameter="recid=fdId,model=com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcBom">
+		</request>
+
+		<request
+			path="chenyee_qc_product/chenyeeQcProduct*"
+			validatorParameter="recid=fdId,model=com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcProduct">
+		</request>
+
+		<request
+			path="chenyee_qc_purchase/chenyeeQcPurchase*"
+			validatorParameter="recid=fdId,model=com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcPurchase">
+		</request>
+
+		<request
+			path="chenyee_qc_earphone/chenyeeQcEarphone*"
+			validatorParameter="recid=fdId,model=com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcEarphone">
+		</request>
+
+		<request
+			path="chenyee_qc_customer/chenyeeQcCustomer*"
+			validatorParameter="recid=fdId,model=com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcCustomer">
+		</request>
+
+		<request
+			path="chenyee_qc_rom_ram/chenyeeQcRomRam*"
+			validatorParameter="recid=fdId,model=com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcRomRam">
+		</request>
+
+	</module>
+
+	<homePage
+		urlPrefix="chenyee/quotecenter"
+		config="/moduleindex_notopic.jsp?nav=/chenyee/quotecenter/tree.jsp"
+		url="/chenyee/quotecenter/index.jsp"
+		messageKey="chenyee-quotecenter:module.chenyee.quotecenter" />
+ 
+	 <flowDef 
+        modelName="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcApply" 
+        key="reviewApply" 
+        type="oa" 
+        moduleMessageKey="chenyee-quotecenter:module.chenyee.quotecenter" 
+        templateModelName="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcApply"/>
+        
+    <profileConfig 
+        key="chenyee/quotecenter" 
+        messageKey="{chenyee-quotecenter:module.chenyee.quotecenter}" 
+        url="/sys/profile/moduleindex.jsp?nav=/chenyee/quotecenter/tree.jsp" 
+        icon="lui_icon_l_icon_53" 
+        type="ekp" 
+        description="{chenyee-quotecenter:chenyeeQcApply.description}"/>
+ 
+</configs>

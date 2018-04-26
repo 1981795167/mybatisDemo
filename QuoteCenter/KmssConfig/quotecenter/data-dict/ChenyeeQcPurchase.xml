@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models
+	xmlns="http://www.example.org/design-config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/design-config ../../../data-dict.xsd ">
+	<model
+		modelName="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcPurchase"
+		messageKey="chenyee-quotecenter:table.chenyeeQcPurchase"
+		displayProperty="fdId"
+		serviceBean="chenyeeQcPurchaseService"
+		table="chenyee_qc_purchase"
+		url="/chenyee/quotecenter/chenyee_qc_purchase/chenyeeQcPurchase.do?method=view&amp;fdId=${fdId}">
+
+		<idProperty>
+			<generator
+				type="assigned" />
+		</idProperty>
+
+		<simpleProperty
+			name="fdManufacturePrice"
+			messageKey="chenyee-quotecenter:chenyeeQcPurchase.fdManufacturePrice"
+			type="Double"
+			column="fd_manufacture_price"
+			notNull="false"
+			length="36"
+			validate="false" />		
+
+		<simpleProperty
+			name="fdStandbyPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcPurchase.fdStandbyPrice"
+			type="Double"
+			column="fd_standby_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdFinancialPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcPurchase.fdFinancialPrice"
+			type="Double"
+			column="fd_financial_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdLogisticsPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcPurchase.fdLogisticsPrice"
+			type="Double"
+			column="fd_logistics_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdQualcommPatentPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcPurchase.fdQualcommPatentPrice"
+			type="Double"
+			column="fd_qualcomm_patent_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdSoftwarePatentPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcPurchase.fdSoftwarePatentPrice"
+			type="Double"
+			column="fd_software_patent_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdHolster"
+			messageKey="chenyee-quotecenter:chenyeeQcPurchase.fdHolster"
+			type="Double"
+			column="fd_holster"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdMembrane"
+			messageKey="chenyee-quotecenter:chenyeeQcPurchase.fdMembrane"
+			type="Double"
+			column="fd_membrane"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdUpdateTime"
+			messageKey="chenyee-quotecenter:chenyeeQcPurchase.fdUpdateTime"
+			type="DateTime"
+			column="fd_update_time"
+			notNull="false"
+			validate="false" />
+
+		<modelProperty
+			name="docCreator"
+			messageKey="chenyee-quotecenter:chenyeeQcPurchase.docCreator"
+			type="com.landray.kmss.sys.organization.model.SysOrgElement"
+			column="doc_creator_id"
+			notNull="false"
+			validate="false" />
+
+         <!-- chenyee liuxf 2018.3.21 add start  -->
+		<modelProperty
+		     name="fdProduct" 
+             column="fd_product_id" 
+             type="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcProduct" 
+             messageKey="chenyee-quotecenter:chenyeeQcRomRam.fdProductId"             
+             notNull="true"
+             validate="true"/>
+         <!-- chenyee liuxf 2018.3.21 add end  -->
+
+ 
+	</model>
+</models>

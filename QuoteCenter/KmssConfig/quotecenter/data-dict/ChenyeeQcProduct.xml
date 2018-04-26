@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models
+	xmlns="http://www.example.org/design-config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/design-config ../../../data-dict.xsd ">
+	<model
+		modelName="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcProduct"
+		messageKey="chenyee-quotecenter:table.chenyeeQcProduct"
+		displayProperty="fdId"
+		serviceBean="chenyeeQcProductService"
+		table="chenyee_qc_product"
+		url="/chenyee/quotecenter/chenyee_qc_product/chenyeeQcProduct.do?method=view&amp;fdId=${fdId}">
+
+		<idProperty>
+			<generator
+				type="assigned" />
+		</idProperty>
+
+		<simpleProperty
+			name="fdProjectName"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdProjectName"
+			type="String"
+			column="fd_project_name"
+			notNull="true"
+			length="200"
+			validate="true" />
+
+		<simpleProperty
+			name="fdStandard"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdStandard"
+			type="String"
+			column="fd_standard"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdAndroidVersion"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdAndroidVersion"
+			type="String"
+			column="fd_android_version"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdRearCamera"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdRearCamera"
+			type="String"
+			column="fd_rear_camera"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdBatteryCapacity"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdBatteryCapacity"
+			type="String"
+			column="fd_battery_capacity"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdFrontCamera"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdFrontCamera"
+			type="String"
+			column="fd_front_camera"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdScreeSize"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdScreeSize"
+			type="String"
+			column="fd_scree_size"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdHardwarePlatform"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdHardwarePlatform"
+			type="String"
+			column="fd_hardware_platform"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="docCreateTime"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.docCreateTime"
+			type="DateTime"
+			column="doc_create_time"
+			notNull="false"
+			validate="true" />
+
+		<simpleProperty
+			name="fdUpdateTime"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdUpdateTime"
+			type="DateTime"
+			column="fd_update_time"
+			notNull="false"
+			validate="true" />
+
+		<modelProperty
+			name="docCreator"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.docCreator"
+			type="com.landray.kmss.sys.organization.model.SysOrgElement"
+			column="doc_creator_id"
+			notNull="false"
+			validate="true" />
+
+        <!-- liuxf 2018.3.21 modify start -->
+		<listProperty
+			name="fdBom"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdBom"
+			type="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcBom"
+			column="fd_product_id"
+			cascade="all-delete-orphan" />
+
+		<listProperty
+			name="fdPurchase"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdPurchase"
+			type="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcPurchase"
+			column="fd_product_id"
+			cascade="all-delete-orphan" />
+
+		<listProperty
+			name="fdHardware"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdHardware"
+			type="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcHardware"
+			column="fd_product_id"
+			cascade="all-delete-orphan" />
+		
+		<listProperty
+			name="fdEarphone"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdEarphone"
+			type="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcEarphone"
+			column="fd_product_id"
+			cascade="all-delete-orphan" />
+			
+	    <!-- liuxf 2018.3.21 modify end -->
+
+	    <!-- liuxf 2018.3.16 modify start -->
+		<listProperty
+			name="fdRomrams"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdRomrams"
+			type="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcRomRam"
+			column="fd_product_id"
+			cascade="all-delete-orphan" />
+          
+		
+		<listProperty
+			name="fdCustomerOrders"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdCustomerOrders"
+			type="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcCustOrder"
+			column="fd_product_id"
+			cascade="all-delete-orphan" />
+		<!-- liuxf 2018.3.16 modify end -->
+ 
+	</model>
+</models>

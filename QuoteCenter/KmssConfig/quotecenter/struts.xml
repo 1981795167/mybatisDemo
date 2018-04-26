@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<!-- 表单 Bean -->
+	<form-beans>
+		<form-bean
+			name="chenyeeQcCustOrderForm"
+			type="com.landray.kmss.chenyee.quotecenter.forms.ChenyeeQcCustOrderForm" />
+		<form-bean
+			name="chenyeeQcSetpercentForm"
+			type="com.landray.kmss.chenyee.quotecenter.forms.ChenyeeQcSetpercentForm" />
+		<form-bean
+			name="chenyeeQcHardwareForm"
+			type="com.landray.kmss.chenyee.quotecenter.forms.ChenyeeQcHardwareForm" />
+		<form-bean
+			name="chenyeeQcApplyForm"
+			type="com.landray.kmss.chenyee.quotecenter.forms.ChenyeeQcApplyForm" />
+		<form-bean
+			name="chenyeeQcBomForm"
+			type="com.landray.kmss.chenyee.quotecenter.forms.ChenyeeQcBomForm" />
+		<form-bean
+			name="chenyeeQcProductForm"
+			type="com.landray.kmss.chenyee.quotecenter.forms.ChenyeeQcProductForm" />
+		<form-bean
+			name="chenyeeQcPurchaseForm"
+			type="com.landray.kmss.chenyee.quotecenter.forms.ChenyeeQcPurchaseForm" />
+		<form-bean
+			name="chenyeeQcEarphoneForm"
+			type="com.landray.kmss.chenyee.quotecenter.forms.ChenyeeQcEarphoneForm" />
+		<form-bean
+			name="chenyeeQcCustomerForm"
+			type="com.landray.kmss.chenyee.quotecenter.forms.ChenyeeQcCustomerForm" />
+		<form-bean
+			name="chenyeeQcRomRamForm"
+			type="com.landray.kmss.chenyee.quotecenter.forms.ChenyeeQcRomRamForm" />
+	</form-beans>
+
+	<!-- 操作映射 -->
+	<action-mappings>
+		<action
+			path="/chenyee/quotecenter/chenyee_qc_cust_order/chenyeeQcCustOrder"
+			type="com.landray.kmss.chenyee.quotecenter.actions.ChenyeeQcCustOrderAction"
+			name="chenyeeQcCustOrderForm"
+			parameter="method"
+			input="edit"
+			unknown="false"
+			validate="true"
+			scope="request">
+			<forward
+				name="view"
+				path="/chenyee/quotecenter/chenyee_qc_cust_order/chenyeeQcCustOrder_view.jsp" />
+			<forward 
+				name="viewDetail" 
+				path="/chenyee/quotecenter/chenyee_qc_quotetable/chenyeeQcTable_viewDetail.jsp"></forward>
+			<forward
+				name="view.4m"
+				path="/chenyee/quotecenter/chenyee_qc_cust_order/mobile/view.jsp" />
+			<forward
+				name="edit"
+				path="/chenyee/quotecenter/chenyee_qc_cust_order/chenyeeQcCustOrder_edit.jsp" />
+			<forward
+				name="data"
+				path="/chenyee/quotecenter/chenyee_qc_cust_order/chenyeeQcCustOrder_data.jsp" />
+			<forward
+				name="data.4m"
+				path="/chenyee/quotecenter/chenyee_qc_cust_order/mobile/list.jsp" />
+		</action>
+
+		<action
+			path="/chenyee/quotecenter/chenyee_qc_setpercent/chenyeeQcSetpercent"
+			type="com.landray.kmss.chenyee.quotecenter.actions.ChenyeeQcSetpercentAction"
+			name="chenyeeQcSetpercentForm"
+			parameter="method"
+			input="edit"
+			unknown="false"
+			validate="true"
+			scope="request">
+			<forward
+				name="view"
+				path="/chenyee/quotecenter/chenyee_qc_setpercent/chenyeeQcSetpercent_view.jsp" />
+			<forward
+				name="view.4m"
+				path="/chenyee/quotecenter/chenyee_qc_setpercent/mobile/view.jsp" />
+			<forward
+				name="edit"
+				path="/chenyee/quotecenter/chenyee_qc_setpercent/chenyeeQcSetpercent_edit.jsp" />
+			<forward
+				name="data"
+				path="/chenyee/quotecenter/chenyee_qc_setpercent/chenyeeQcSetpercent_data.jsp" />
+			<forward
+				name="data.4m"
+				path="/chenyee/quotecenter/chenyee_qc_setpercent/mobile/list.jsp" />
+		</action>
+
+		<action
+			path="/chenyee/quotecenter/chenyee_qc_hardware/chenyeeQcHardware"
+			type="com.landray.kmss.chenyee.quotecenter.actions.ChenyeeQcHardwareAction"
+			name="chenyeeQcHardwareForm"
+			parameter="method"
+			input="edit"
+			unknown="false"
+			validate="true"
+			scope="request">
+			<forward
+				name="view"
+				path="/chenyee/quotecenter/chenyee_qc_hardware/chenyeeQcHardware_view.jsp" />
+			<forward
+				name="view.4m"
+				path="/chenyee/quotecenter/chenyee_qc_hardware/mobile/view.jsp" />
+			<forward
+				name="edit"
+				path="/chenyee/quotecenter/chenyee_qc_hardware/chenyeeQcHardware_edit.jsp" />
+			<forward
+				name="data"
+				path="/chenyee/quotecenter/chenyee_qc_hardware/chenyeeQcHardware_data.jsp" />
+			<forward
+				name="data.4m"
+				path="/chenyee/quotecenter/chenyee_qc_hardware/mobile/list.jsp" />
+		</action>
+
+		<action
+			path="/chenyee/quotecenter/chenyee_qc_apply/chenyeeQcApply"
+			type="com.landray.kmss.chenyee.quotecenter.actions.ChenyeeQcApplyAction"
+			name="chenyeeQcApplyForm"
+			parameter="method"
+			input="edit"
+			unknown="false"
+			validate="true"
+			scope="request">
+			<forward
+				name="view"
+				path="/chenyee/quotecenter/chenyee_qc_apply/chenyeeQcApply_view.jsp" />
+			<forward
+				name="view_boss"
+				path="/chenyee/quotecenter/chenyee_qc_apply/chenyeeQcApply_view_boss.jsp" />
+			<forward
+				name="view.4m"
+				path="/chenyee/quotecenter/chenyee_qc_apply/mobile/view.jsp" />
+			<forward
+				name="edit"
+				path="/chenyee/quotecenter/chenyee_qc_apply/chenyeeQcApply_edit.jsp" />
+			<forward
+				name="data"
+				path="/chenyee/quotecenter/chenyee_qc_apply/chenyeeQcApply_data.jsp" />
+			<forward
+				name="data.4m"
+				path="/chenyee/quotecenter/chenyee_qc_apply/mobile/list.jsp" />
+		</action>
+
+		<action
+			path="/chenyee/quotecenter/chenyee_qc_bom/chenyeeQcBom"
+			type="com.landray.kmss.chenyee.quotecenter.actions.ChenyeeQcBomAction"
+			name="chenyeeQcBomForm"
+			parameter="method"
+			input="edit"
+			unknown="false"
+			validate="true"
+			scope="request">
+			<forward
+				name="view"
+				path="/chenyee/quotecenter/chenyee_qc_bom/chenyeeQcBom_view.jsp" />
+			<forward
+				name="view.4m"
+				path="/chenyee/quotecenter/chenyee_qc_bom/mobile/view.jsp" />
+			<forward
+				name="edit"
+				path="/chenyee/quotecenter/chenyee_qc_bom/chenyeeQcBom_edit.jsp" />
+			<forward
+				name="data"
+				path="/chenyee/quotecenter/chenyee_qc_bom/chenyeeQcBom_data.jsp" />
+			<forward
+				name="data.4m"
+				path="/chenyee/quotecenter/chenyee_qc_bom/mobile/list.jsp" />
+		</action>
+
+		<action
+			path="/chenyee/quotecenter/chenyee_qc_product/chenyeeQcProduct"
+			type="com.landray.kmss.chenyee.quotecenter.actions.ChenyeeQcProductAction"
+			name="chenyeeQcProductForm"
+			parameter="method"
+			input="edit"
+			unknown="false"
+			validate="true"
+			scope="request">
+			<forward
+				name="view"
+				path="/chenyee/quotecenter/chenyee_qc_product/chenyeeQcProduct_view.jsp" />
+			<forward
+				name="view.4m"
+				path="/chenyee/quotecenter/chenyee_qc_product/mobile/view.jsp" />
+			<forward
+				name="edit"
+				path="/chenyee/quotecenter/chenyee_qc_product/chenyeeQcProduct_edit.jsp" />
+			<forward
+				name="data"
+				path="/chenyee/quotecenter/chenyee_qc_product/chenyeeQcProduct_data.jsp" />
+			<forward
+				name="data.4m"
+				path="/chenyee/quotecenter/chenyee_qc_product/mobile/list.jsp" />
+		</action>
+
+		<action
+			path="/chenyee/quotecenter/chenyee_qc_purchase/chenyeeQcPurchase"
+			type="com.landray.kmss.chenyee.quotecenter.actions.ChenyeeQcPurchaseAction"
+			name="chenyeeQcPurchaseForm"
+			parameter="method"
+			input="edit"
+			unknown="false"
+			validate="true"
+			scope="request">
+			<forward
+				name="view"
+				path="/chenyee/quotecenter/chenyee_qc_purchase/chenyeeQcPurchase_view.jsp" />
+			<forward
+				name="view.4m"
+				path="/chenyee/quotecenter/chenyee_qc_purchase/mobile/view.jsp" />
+			<forward
+				name="edit"
+				path="/chenyee/quotecenter/chenyee_qc_purchase/chenyeeQcPurchase_edit.jsp" />
+			<forward
+				name="data"
+				path="/chenyee/quotecenter/chenyee_qc_purchase/chenyeeQcPurchase_data.jsp" />
+			<forward
+				name="data.4m"
+				path="/chenyee/quotecenter/chenyee_qc_purchase/mobile/list.jsp" />
+		</action>
+
+		<action
+			path="/chenyee/quotecenter/chenyee_qc_earphone/chenyeeQcEarphone"
+			type="com.landray.kmss.chenyee.quotecenter.actions.ChenyeeQcEarphoneAction"
+			name="chenyeeQcEarphoneForm"
+			parameter="method"
+			input="edit"
+			unknown="false"
+			validate="true"
+			scope="request">
+			<forward
+				name="view"
+				path="/chenyee/quotecenter/chenyee_qc_earphone/chenyeeQcEarphone_view.jsp" />
+			<forward
+				name="view.4m"
+				path="/chenyee/quotecenter/chenyee_qc_earphone/mobile/view.jsp" />
+			<forward
+				name="edit"
+				path="/chenyee/quotecenter/chenyee_qc_earphone/chenyeeQcEarphone_edit.jsp" />
+			<forward
+				name="data"
+				path="/chenyee/quotecenter/chenyee_qc_earphone/chenyeeQcEarphone_data.jsp" />
+			<forward
+				name="data.4m"
+				path="/chenyee/quotecenter/chenyee_qc_earphone/mobile/list.jsp" />
+		</action>
+
+		<action
+			path="/chenyee/quotecenter/chenyee_qc_customer/chenyeeQcCustomer"
+			type="com.landray.kmss.chenyee.quotecenter.actions.ChenyeeQcCustomerAction"
+			name="chenyeeQcCustomerForm"
+			parameter="method"
+			input="edit"
+			unknown="false"
+			validate="true"
+			scope="request">
+			<forward
+				name="view"
+				path="/chenyee/quotecenter/chenyee_qc_customer/chenyeeQcCustomer_view.jsp" />
+			<forward
+				name="view.4m"
+				path="/chenyee/quotecenter/chenyee_qc_customer/mobile/view.jsp" />
+			<forward
+				name="edit"
+				path="/chenyee/quotecenter/chenyee_qc_customer/chenyeeQcCustomer_edit.jsp" />
+			<forward
+				name="data"
+				path="/chenyee/quotecenter/chenyee_qc_customer/chenyeeQcCustomer_data.jsp" />
+			<forward
+				name="data.4m"
+				path="/chenyee/quotecenter/chenyee_qc_customer/mobile/list.jsp" />
+		</action>
+
+		<action
+			path="/chenyee/quotecenter/chenyee_qc_rom_ram/chenyeeQcRomRam"
+			type="com.landray.kmss.chenyee.quotecenter.actions.ChenyeeQcRomRamAction"
+			name="chenyeeQcRomRamForm"
+			parameter="method"
+			input="edit"
+			unknown="false"
+			validate="true"
+			scope="request">
+			<forward
+				name="view"
+				path="/chenyee/quotecenter/chenyee_qc_rom_ram/chenyeeQcRomRam_view.jsp" />
+			<forward
+				name="view.4m"
+				path="/chenyee/quotecenter/chenyee_qc_rom_ram/mobile/view.jsp" />
+			<forward
+				name="edit"
+				path="/chenyee/quotecenter/chenyee_qc_rom_ram/chenyeeQcRomRam_edit.jsp" />
+			<forward
+				name="data"
+				path="/chenyee/quotecenter/chenyee_qc_rom_ram/chenyeeQcRomRam_data.jsp" />
+			<forward
+				name="data.4m"
+				path="/chenyee/quotecenter/chenyee_qc_rom_ram/mobile/list.jsp" />
+		</action>
+
+
+	</action-mappings>
+	<!-- 消息资源 -->
+	<message-resources
+		parameter="com.landray.kmss.chenyee.quotecenter.ApplicationResources"
+		key="chenyee-quotecenter" />
+</struts-config>

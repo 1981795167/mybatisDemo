@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<bean
+		id="chenyeeQcCustOrderDao"
+		parent="KmssExtendDataAreaDao"
+		class="com.landray.kmss.chenyee.quotecenter.dao.hibernate.ChenyeeQcCustOrderDaoImp">
+		<property
+			name="modelName"
+			value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcCustOrder" />
+	</bean>
+
+	<bean
+		id="chenyeeQcCustOrderTarget"
+		parent="KmssExtendDataTarget"
+		class="com.landray.kmss.chenyee.quotecenter.service.spring.ChenyeeQcCustOrderServiceImp">
+		<property
+			name="baseDao">
+			<ref
+				local="chenyeeQcCustOrderDao" />
+		</property>
+	</bean>
+	<bean
+		id="chenyeeQcCustOrderService"
+		parent="KmssBaseService">
+		<property
+			name="target">
+			<ref
+				local="chenyeeQcCustOrderTarget" />
+		</property>
+	</bean>
+
+	
+	<bean
+		id="chenyeeQcSetpercentDao"
+		parent="KmssExtendDataAreaDao"
+		class="com.landray.kmss.chenyee.quotecenter.dao.hibernate.ChenyeeQcSetpercentDaoImp">
+		<property
+			name="modelName"
+			value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcSetpercent" />
+	</bean>
+
+	<bean
+		id="chenyeeQcSetpercentTarget"
+		parent="KmssExtendDataTarget"
+		class="com.landray.kmss.chenyee.quotecenter.service.spring.ChenyeeQcSetpercentServiceImp">
+		<property
+			name="baseDao">
+			<ref
+				local="chenyeeQcSetpercentDao" />
+		</property>
+	</bean>
+	<bean
+		id="chenyeeQcSetpercentService"
+		parent="KmssBaseService">
+		<property
+			name="target">
+			<ref
+				local="chenyeeQcSetpercentTarget" />
+		</property>
+	</bean>
+
+	
+	<bean
+		id="chenyeeQcHardwareDao"
+		parent="KmssExtendDataAreaDao"
+		class="com.landray.kmss.chenyee.quotecenter.dao.hibernate.ChenyeeQcHardwareDaoImp">
+		<property
+			name="modelName"
+			value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcHardware" />
+	</bean>
+
+	<bean
+		id="chenyeeQcHardwareTarget"
+		parent="KmssExtendDataTarget"
+		class="com.landray.kmss.chenyee.quotecenter.service.spring.ChenyeeQcHardwareServiceImp">
+		<property
+			name="baseDao">
+			<ref
+				local="chenyeeQcHardwareDao" />
+		</property>
+	</bean>
+	<bean
+		id="chenyeeQcHardwareService"
+		parent="KmssBaseService">
+		<property
+			name="target">
+			<ref
+				local="chenyeeQcHardwareTarget" />
+		</property>
+	</bean>
+
+	
+	<bean
+		id="chenyeeQcApplyDao"
+		parent="KmssExtendDataAreaDao"
+		class="com.landray.kmss.chenyee.quotecenter.dao.hibernate.ChenyeeQcApplyDaoImp">
+		<property
+			name="modelName"
+			value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcApply" />
+	</bean>
+
+	<bean
+		id="chenyeeQcApplyTarget"
+		parent="KmssExtendDataTarget"
+		class="com.landray.kmss.chenyee.quotecenter.service.spring.ChenyeeQcApplyServiceImp">
+		<property
+			name="baseDao">
+			<ref
+				local="chenyeeQcApplyDao" />
+		</property>
+	</bean>
+	<bean
+		id="chenyeeQcApplyService"
+		parent="KmssBaseService">
+		<property
+			name="target">
+			<ref
+				local="chenyeeQcApplyTarget" />
+		</property>
+	</bean>
+
+	
+	<bean
+		id="chenyeeQcBomDao"
+		parent="KmssExtendDataAreaDao"
+		class="com.landray.kmss.chenyee.quotecenter.dao.hibernate.ChenyeeQcBomDaoImp">
+		<property
+			name="modelName"
+			value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcBom" />
+	</bean>
+
+	<bean
+		id="chenyeeQcBomTarget"
+		parent="KmssExtendDataTarget"
+		class="com.landray.kmss.chenyee.quotecenter.service.spring.ChenyeeQcBomServiceImp">
+		<property
+			name="baseDao">
+			<ref
+				local="chenyeeQcBomDao" />
+		</property>
+	</bean>
+	<bean
+		id="chenyeeQcBomService"
+		parent="KmssBaseService">
+		<property
+			name="target">
+			<ref
+				local="chenyeeQcBomTarget" />
+		</property>
+	</bean>
+
+	
+	<bean
+		id="chenyeeQcProductDao"
+		parent="KmssExtendDataAreaDao"
+		class="com.landray.kmss.chenyee.quotecenter.dao.hibernate.ChenyeeQcProductDaoImp">
+		<property
+			name="modelName"
+			value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcProduct" />
+	</bean>
+
+	<bean
+		id="chenyeeQcProductTarget"
+		parent="KmssExtendDataTarget"
+		class="com.landray.kmss.chenyee.quotecenter.service.spring.ChenyeeQcProductServiceImp">
+		<property
+			name="baseDao">
+			<ref
+				local="chenyeeQcProductDao" />
+		</property>
+	</bean>
+	<bean
+		id="chenyeeQcProductService"
+		parent="KmssBaseService">
+		<property
+			name="target">
+			<ref
+				local="chenyeeQcProductTarget" />
+		</property>
+	</bean>
+
+	
+	<bean
+		id="chenyeeQcPurchaseDao"
+		parent="KmssExtendDataAreaDao"
+		class="com.landray.kmss.chenyee.quotecenter.dao.hibernate.ChenyeeQcPurchaseDaoImp">
+		<property
+			name="modelName"
+			value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcPurchase" />
+	</bean>
+
+	<bean
+		id="chenyeeQcPurchaseTarget"
+		parent="KmssExtendDataTarget"
+		class="com.landray.kmss.chenyee.quotecenter.service.spring.ChenyeeQcPurchaseServiceImp">
+		<property
+			name="baseDao">
+			<ref
+				local="chenyeeQcPurchaseDao" />
+		</property>
+	</bean>
+	<bean
+		id="chenyeeQcPurchaseService"
+		parent="KmssBaseService">
+		<property
+			name="target">
+			<ref
+				local="chenyeeQcPurchaseTarget" />
+		</property>
+	</bean>
+
+	
+	<bean
+		id="chenyeeQcEarphoneDao"
+		parent="KmssExtendDataAreaDao"
+		class="com.landray.kmss.chenyee.quotecenter.dao.hibernate.ChenyeeQcEarphoneDaoImp">
+		<property
+			name="modelName"
+			value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcEarphone" />
+	</bean>
+
+	<bean
+		id="chenyeeQcEarphoneTarget"
+		parent="KmssExtendDataTarget"
+		class="com.landray.kmss.chenyee.quotecenter.service.spring.ChenyeeQcEarphoneServiceImp">
+		<property
+			name="baseDao">
+			<ref
+				local="chenyeeQcEarphoneDao" />
+		</property>
+	</bean>
+	<bean
+		id="chenyeeQcEarphoneService"
+		parent="KmssBaseService">
+		<property
+			name="target">
+			<ref
+				local="chenyeeQcEarphoneTarget" />
+		</property>
+	</bean>
+
+	
+	<bean
+		id="chenyeeQcCustomerDao"
+		parent="KmssExtendDataAreaDao"
+		class="com.landray.kmss.chenyee.quotecenter.dao.hibernate.ChenyeeQcCustomerDaoImp">
+		<property
+			name="modelName"
+			value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcCustomer" />
+	</bean>
+
+	<bean
+		id="chenyeeQcCustomerTarget"
+		parent="KmssExtendDataTarget"
+		class="com.landray.kmss.chenyee.quotecenter.service.spring.ChenyeeQcCustomerServiceImp">
+		<property
+			name="baseDao">
+			<ref
+				local="chenyeeQcCustomerDao" />
+		</property>
+	</bean>
+	<bean
+		id="chenyeeQcCustomerService"
+		parent="KmssBaseService">
+		<property
+			name="target">
+			<ref
+				local="chenyeeQcCustomerTarget" />
+		</property>
+	</bean>
+
+	
+	<bean
+		id="chenyeeQcRomRamDao"
+		parent="KmssExtendDataAreaDao"
+		class="com.landray.kmss.chenyee.quotecenter.dao.hibernate.ChenyeeQcRomRamDaoImp">
+		<property
+			name="modelName"
+			value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcRomRam" />
+	</bean>
+
+	<bean
+		id="chenyeeQcRomRamTarget"
+		parent="KmssExtendDataTarget"
+		class="com.landray.kmss.chenyee.quotecenter.service.spring.ChenyeeQcRomRamServiceImp">
+		<property
+			name="baseDao">
+			<ref
+				local="chenyeeQcRomRamDao" />
+		</property>
+	</bean>
+	<bean
+		id="chenyeeQcRomRamService"
+		parent="KmssBaseService">
+		<property
+			name="target">
+			<ref
+				local="chenyeeQcRomRamTarget" />
+		</property>
+	</bean>
+	<!-- chenyee yht add 报价总表Service -->
+	<bean
+		id="chenyeeQcTableAction"
+		parent="KmssBaseService">
+		<property
+			name="target">
+			<ref
+				local="chenyeeQcTableTarget" />
+		</property>
+	</bean>
+	<bean
+		id="chenyeeQcTableTarget"
+		parent="KmssExtendDataTarget"
+		class="com.landray.kmss.chenyee.quotecenter.service.spring.ChenyeeQcTableServiceImpl">
+	</bean>
+	<!-- chenyee yht add end 报价总表Service -->
+	
+</beans>

@@ -1,0 +1,266 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class
+		name="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcApply"
+		table="chenyee_qc_apply">
+		<id
+			name="fdId"
+			column="fd_id"
+			length="36">
+			<generator
+				class="assigned" />
+		</id>
+
+		<property
+			name="rfVersion"
+			column="rf_version"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+			
+		<property
+			name="rfPrice"
+			column="rf_price"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+		
+		<property
+			name="boxName"
+			column="box_name"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+		
+		<property
+			name="boxPrice"
+			column="box_price"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+			
+		<property
+			name="partsName"
+			column="parts_name"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+			
+		<property
+			name="partsPrice"
+			column="parts_price"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="other"
+			column="other"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="otherPrice"
+			column="other_price"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="fdAndroidVersion"
+			column="fd_android_version"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+		
+		<property
+			name="fdRearCamera"
+			column="fd_rear_camera"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="fdBatteryCapacity"
+			column="fd_battery_capacity"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="fdFrontCamera"
+			column="fd_front_camera"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="fdScreeSize"
+			column="fd_scree_size"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="fdHardwarePlatform"
+			column="fd_hardware_platform"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="fdApplicationTitle"
+			column="fd_application_title"
+			update="true"
+			insert="true"
+			length="200"
+			not-null="true" />
+
+		<property
+			name="fdProjectName"
+			column="fd_project_name"
+			update="true"
+			insert="true"
+			length="200"
+			not-null="true" />
+
+		<property
+			name="fdCustomerName"
+			column="fd_customer_name"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="true" />
+
+		<property
+			name="fdRomRam"
+			column="fd_rom_ram"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="true" />
+
+		<property
+			name="fdMembrane"
+			column="fd_membrane"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="fdHolster"
+			column="fd_holster"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="fdPrice"
+			column="fd_price"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="fdBottomPrice"
+			column="fd_bottom_price"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="true" />
+
+		<property
+			name="fdCostPrice"
+			column="fd_cost_price"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="true" />
+
+		<property
+			name="fdApplicationPrice"
+			column="fd_application_price"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="true" />
+
+		<property
+			name="fdApplicationTime"
+			column="fd_application_time"
+			update="true"
+			insert="true"
+			not-null="true" />
+
+		<property
+			name="docStatus"
+			column="doc_status"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="true" />
+
+		<property
+			name="fdQuotePath"
+			column="fd_quote_path"
+			update="true"
+			insert="true"
+			length="200"
+			not-null="true" />
+
+		<property
+			name="fdPresetPercent"
+			column="fd_preset_percent"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="true" />
+
+		<property
+			name="fdApplyQuotePercent"
+			column="fd_apply_quote_percent"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="true" />
+
+		<property
+			name="fdGm"
+			column="fd_gm"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="true" />
+
+		<many-to-one
+			name="docCreator"
+			column="doc_creator_id"
+			insert="true"
+			update="true"
+			not-null="true" />
+
+
+	</class>
+</hibernate-mapping>

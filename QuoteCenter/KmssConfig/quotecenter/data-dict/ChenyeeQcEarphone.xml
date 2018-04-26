@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models
+	xmlns="http://www.example.org/design-config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/design-config ../../../data-dict.xsd ">
+	<model
+		modelName="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcEarphone"
+		messageKey="chenyee-quotecenter:table.chenyeeQcEarphone"
+		displayProperty="fdId"
+		serviceBean="chenyeeQcEarphoneService"
+		table="chenyee_qc_earphone"
+		url="/chenyee/quotecenter/chenyee_qc_earphone/chenyeeQcEarphone.do?method=view&amp;fdId=${fdId}">
+
+		<idProperty>
+			<generator
+				type="assigned" />
+		</idProperty>
+
+		<simpleProperty
+			name="fdLowPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcEarphone.fdLowPrice"
+			type="Double"
+			column="fd_low_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdMidPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcEarphone.fdMidPrice"
+			type="Double"
+			column="fd_mid_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdHighPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcEarphone.fdHighPrice"
+			type="Double"
+			column="fd_high_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdDefaultPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcEarphone.fdDefaultPrice"
+			type="Double"
+			column="fd_default_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<!-- chenyee liuxf 2018.3.21 add start  -->
+		<modelProperty
+		     name="fdProduct" 
+             column="fd_product_id" 
+             type="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcProduct" 
+             messageKey="chenyee-quotecenter:chenyeeQcRomRam.fdProductId"             
+             notNull="true"
+             validate="true"/>
+         <!-- chenyee liuxf 2018.3.21 add end  -->
+
+ 
+
+ 
+	</model>
+</models>

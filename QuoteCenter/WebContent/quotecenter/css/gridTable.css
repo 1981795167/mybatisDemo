@@ -1,0 +1,60 @@
+.bj_box {
+	background-color: #fff;
+	border:solid #ddd 1px;
+	margin: 0px 10px 10px 0px;
+	
+}
+.bj_box:hover {
+	cursor:pointer;
+	border:solid #29AEC7 1px;
+	box-shadow: 0px 6px 25px #29AEC7;transition:all .2s linear;-webkit-transition:all .2s linear;-moz-transition:all .2s linear;-ms-transition:all .2s linear;-o-transition:all .2s linear;
+}
+
+.bj_box .top {
+	padding: 5px 0px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px;
+	border-bottom: solid 1px #ddd;
+}
+
+.bj_box .center {
+	padding: 10px 0px;
+}
+
+.bj_box .center b {
+	font-weight: normal;
+	font-size: 12px;
+	vertical-align: middle;
+}
+
+.bj_box .center .top_left {
+	font-size: 28px;
+}
+
+.top_left {
+	width: 50%;
+	border-right: solid 1px #ddd;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.top_right {
+	width: 49%;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.bj_box .bottom {
+	border-bottom: 0px;
+}
+
+.bj_box .bottom b {
+	font-weight: normal;
+	font-size: 12px;
+	vertical-align: middle;
+}

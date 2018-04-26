@@ -1,0 +1,61 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class
+		name="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcEarphone"
+		table="chenyee_qc_earphone">
+		<id
+			name="fdId"
+			column="fd_id"
+			length="36">
+			<generator
+				class="assigned" />
+		</id>
+
+		<property
+			name="fdLowPrice"
+			column="fd_low_price"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="fdMidPrice"
+			column="fd_mid_price"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="fdHighPrice"
+			column="fd_high_price"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<property
+			name="fdDefaultPrice"
+			column="fd_default_price"
+			update="true"
+			insert="true"
+			length="36"
+			not-null="false" />
+
+		<!-- chenyee liuxf 2018.3.20 modify start -->
+		<many-to-one
+			name="fdProduct"
+			column="fd_product_id"
+			insert="true"
+			update="true"
+			not-null="false" />
+		<!-- chenyee liuxf 2018.3.20 modify end -->
+
+
+	</class>
+</hibernate-mapping>

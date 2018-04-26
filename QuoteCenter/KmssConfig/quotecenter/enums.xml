@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<column-enums>
+	<type 
+        name="chenyee_qc_doc_status">
+        <value-label>
+            <value>00</value>
+            <label-key>enums.doc_status.00</label-key>
+            <bundle>chenyee-quotecenter</bundle>
+        </value-label>
+        <value-label>
+            <value>10</value>
+            <label-key>enums.doc_status.10</label-key>
+            <bundle>chenyee-quotecenter</bundle>
+        </value-label>
+        <value-label>
+            <value>11</value>
+            <label-key>enums.doc_status.11</label-key>
+            <bundle>chenyee-quotecenter</bundle>
+        </value-label>
+        <value-label>
+            <value>20</value>
+            <label-key>enums.doc_status.20</label-key>
+            <bundle>chenyee-quotecenter</bundle>
+        </value-label>
+        <value-label>
+            <value>30</value>
+            <label-key>enums.doc_status.30</label-key>
+            <bundle>chenyee-quotecenter</bundle>
+        </value-label>
+    </type>
+
+</column-enums>

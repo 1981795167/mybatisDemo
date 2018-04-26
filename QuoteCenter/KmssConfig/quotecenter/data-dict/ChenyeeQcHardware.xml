@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models
+	xmlns="http://www.example.org/design-config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/design-config ../../../data-dict.xsd ">
+	<model
+		modelName="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcHardware"
+		messageKey="chenyee-quotecenter:table.chenyeeQcHardware"
+		displayProperty="fdId"
+		serviceBean="chenyeeQcHardwareService"
+		table="chenyee_qc_hardware"
+		url="/chenyee/quotecenter/chenyee_qc_hardware/chenyeeQcHardware.do?method=view&amp;fdId=${fdId}">
+
+		<idProperty>
+			<generator
+				type="assigned" />
+		</idProperty>
+
+		<simpleProperty
+			name="fdHardwarePrice"
+			messageKey="chenyee-quotecenter:chenyeeQcHardware.fdHardwarePrice"
+			type="Double"
+			column="fd_hardware_price"
+			notNull="true"
+			length="36"
+			validate="false" />
+
+
+		<simpleProperty
+			name="fdUpdateTime"
+			messageKey="chenyee-quotecenter:chenyeeQcHardware.fdUpdateTime"
+			type="DateTime"
+			column="fd_update_time"
+			notNull="true"
+			validate="false" />
+
+		<modelProperty
+			name="docCreator"
+			messageKey="chenyee-quotecenter:chenyeeQcHardware.docCreator"
+			type="com.landray.kmss.sys.organization.model.SysOrgElement"
+			column="doc_creator_id"
+			notNull="true"
+			validate="false" />		
+		   
+		   <!-- chenyee liuxf 2018.3.20 add start  -->
+		<modelProperty
+		     name="fdProduct" 
+             column="fd_product_id" 
+             type="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcProduct" 
+             messageKey="chenyee-quotecenter:chenyeeQcRomRam.fdProductId"             
+             notNull="true"
+             validate="true"/>
+         <!-- chenyee liuxf 2018.3.20 add end  -->
+
+
+ 
+
+ 
+	</model>
+</models>

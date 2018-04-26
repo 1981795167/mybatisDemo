@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models
+	xmlns="http://www.example.org/design-config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/design-config ../../../data-dict.xsd ">
+	<model
+		modelName="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcCustomer"
+		messageKey="chenyee-quotecenter:table.chenyeeQcCustomer"
+		displayProperty="fdId"
+		serviceBean="chenyeeQcCustomerService"
+		table="chenyee_qc_customer"
+		url="/chenyee/quotecenter/chenyee_qc_customer/chenyeeQcCustomer.do?method=view&amp;fdId=${fdId}">
+
+		<idProperty>
+			<generator
+				type="assigned" />
+		</idProperty>
+
+		<simpleProperty
+			name="fdCustomerName"
+			messageKey="chenyee-quotecenter:chenyeeQcCustomer.fdCustomerName"
+			type="String"
+			column="fd_customer_name"
+			notNull="true"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="docCreateTime"
+			messageKey="chenyee-quotecenter:chenyeeQcCustomer.docCreateTime"
+			type="DateTime"
+			column="doc_create_time"
+			notNull="true"
+			validate="false" />
+
+		<simpleProperty
+			name="fdUpdateTime"
+			messageKey="chenyee-quotecenter:chenyeeQcCustomer.fdUpdateTime"
+			type="DateTime"
+			column="fd_update_time"
+			notNull="true"
+			validate="false" />
+
+		<modelProperty
+			name="docCreator"
+			messageKey="chenyee-quotecenter:chenyeeQcCustomer.docCreator"
+			type="com.landray.kmss.sys.organization.model.SysOrgElement"
+			column="doc_creator_id"
+			notNull="true"
+			validate="false" />
+
+ 
+
+ 
+	</model>
+</models>

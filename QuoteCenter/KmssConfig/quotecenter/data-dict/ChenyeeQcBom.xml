@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models
+	xmlns="http://www.example.org/design-config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/design-config ../../../data-dict.xsd ">
+	<model
+		modelName="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcBom"
+		messageKey="chenyee-quotecenter:table.chenyeeQcBom"
+		displayProperty="fdBomName"
+		serviceBean="chenyeeQcBomService"
+		table="chenyee_qc_bom"
+		url="/chenyee/quotecenter/chenyee_qc_bom/chenyeeQcBom.do?method=view&amp;fdId=${fdId}">
+
+		<idProperty>
+			<generator
+				type="assigned" />
+		</idProperty>
+
+		<simpleProperty
+			name="fdBomName"
+			messageKey="chenyee-quotecenter:chenyeeQcBom.fdBomName"
+			type="String"
+			column="fd_bom_name"
+			notNull="true"
+			length="200"
+			validate="true" />
+
+		<simpleProperty
+			name="fdBomPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcBom.fdBomPrice"
+			type="String"
+			column="fd_bom_price"
+			notNull="true"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdBomCode"
+			messageKey="chenyee-quotecenter:chenyeeQcBom.fdBomCode"
+			type="String"
+			column="fd_bom_code"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdFactory"
+			messageKey="chenyee-quotecenter:chenyeeQcBom.fdFactory"
+			type="String"
+			column="fd_factory"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdApplication"
+			messageKey="chenyee-quotecenter:chenyeeQcBom.fdApplication"
+			type="String"
+			column="fd_application"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdVersionDescription"
+			messageKey="chenyee-quotecenter:chenyeeQcBom.fdVersionDescription"
+			type="String"
+			column="fd_version_description"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdVersion"
+			messageKey="chenyee-quotecenter:chenyeeQcBom.fdVersion"
+			type="String"
+			column="fd_version"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdMaterielCode"
+			messageKey="chenyee-quotecenter:chenyeeQcBom.fdMaterielCode"
+			type="String"
+			column="fd_materiel_code"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdDimension"
+			messageKey="chenyee-quotecenter:chenyeeQcBom.fdDimension"
+			type="String"
+			column="fd_dimension"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdMaterielPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcBom.fdMaterielPrice"
+			type="String"
+			column="fd_materiel_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdSerialNumber"
+			messageKey="chenyee-quotecenter:chenyeeQcBom.fdSerialNumber"
+			type="String"
+			column="fd_serial_number"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdMaterialDescription"
+			messageKey="chenyee-quotecenter:chenyeeQcBom.fdMaterialDescription"
+			type="String"
+			column="fd_material_description"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdBomPriceUpdateTime"
+			messageKey="chenyee-quotecenter:chenyeeQcBom.fdBomPriceUpdateTime"
+			type="DateTime"
+			column="fd_bom_price_update_time"
+			notNull="false"
+			validate="false" />
+
+         <!-- chenyee liuxf 2018.3.21 add start  -->
+		<modelProperty
+		     name="fdProduct" 
+             column="fd_product_id" 
+             type="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcProduct" 
+             messageKey="chenyee-quotecenter:chenyeeQcRomRam.fdProductId"             
+             notNull="false"
+             validate="true"/>
+         <!-- chenyee liuxf 2018.3.21 add end  -->
+ 
+	</model>
+</models>

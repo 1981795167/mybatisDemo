@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.example.org/plugin-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/plugin-config ../../plugin.xsd ">
+		<extension point="com.landray.kmss.sys.mobile.config">
+		<item name="info">
+			<param name="name" value="{chenyee-quotecenter:table.chenyeeQcCustOrder}" />
+			<param name="modelName" value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcCustOrder" />
+		</item>
+	</extension>
+	<extension point="com.landray.kmss.sys.mobile.config">
+		<item name="info">
+			<param name="name" value="{chenyee-quotecenter:table.chenyeeQcSetpercent}" />
+			<param name="modelName" value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcSetpercent" />
+		</item>
+	</extension>
+	<extension point="com.landray.kmss.sys.mobile.config">
+		<item name="info">
+			<param name="name" value="{chenyee-quotecenter:table.chenyeeQcHardware}" />
+			<param name="modelName" value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcHardware" />
+		</item>
+	</extension>
+	<extension point="com.landray.kmss.sys.mobile.config">
+		<item name="info">
+			<param name="name" value="{chenyee-quotecenter:table.chenyeeQcApply}" />
+			<param name="modelName" value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcApply" />
+		</item>
+	</extension>
+	<extension point="com.landray.kmss.sys.mobile.config">
+		<item name="info">
+			<param name="name" value="{chenyee-quotecenter:table.chenyeeQcBom}" />
+			<param name="modelName" value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcBom" />
+		</item>
+	</extension>
+	<extension point="com.landray.kmss.sys.mobile.config">
+		<item name="info">
+			<param name="name" value="{chenyee-quotecenter:table.chenyeeQcProduct}" />
+			<param name="modelName" value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcProduct" />
+		</item>
+	</extension>
+	<extension point="com.landray.kmss.sys.mobile.config">
+		<item name="info">
+			<param name="name" value="{chenyee-quotecenter:table.chenyeeQcPurchase}" />
+			<param name="modelName" value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcPurchase" />
+		</item>
+	</extension>
+	<extension point="com.landray.kmss.sys.mobile.config">
+		<item name="info">
+			<param name="name" value="{chenyee-quotecenter:table.chenyeeQcEarphone}" />
+			<param name="modelName" value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcEarphone" />
+		</item>
+	</extension>
+	<extension point="com.landray.kmss.sys.mobile.config">
+		<item name="info">
+			<param name="name" value="{chenyee-quotecenter:table.chenyeeQcCustomer}" />
+			<param name="modelName" value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcCustomer" />
+		</item>
+	</extension>
+	<extension point="com.landray.kmss.sys.mobile.config">
+		<item name="info">
+			<param name="name" value="{chenyee-quotecenter:table.chenyeeQcRomRam}" />
+			<param name="modelName" value="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcRomRam" />
+		</item>
+	</extension>
+</plugin>

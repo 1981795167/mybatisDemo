@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models
+	xmlns="http://www.example.org/design-config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/design-config ../../../data-dict.xsd ">
+	<model
+		modelName="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcCustOrder"
+		messageKey="chenyee-quotecenter:table.chenyeeQcCustOrder"
+		displayProperty="fdId"
+		serviceBean="chenyeeQcCustOrderService"
+		table="chenyee_qc_cust_order"
+		url="/chenyee/quotecenter/chenyee_qc_cust_order/chenyeeQcCustOrder.do?method=view&amp;fdId=${fdId}">
+
+		<idProperty>
+			<generator
+				type="assigned" />
+		</idProperty>
+
+		<simpleProperty
+			name="fdProjectName"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdProjectName"
+			type="String"
+			column="fd_project_name"
+			notNull="true"
+			length="200"
+			validate="true" />
+
+		<simpleProperty
+			name="fdCustomerName"
+			messageKey="chenyee-quotecenter:chenyeeQcCustOrder.fdCustomerName"
+			type="String"
+			column="fd_customer_name"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdRomRam"
+			messageKey="chenyee-quotecenter:chenyeeQcCustOrder.fdRomRam"
+			type="String"
+			column="fd_rom_ram"
+			notNull="true"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdProductPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcCustOrder.fdProductPrice"
+			type="Double"
+			column="fd_product_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdBottomPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcCustOrder.fdBottomPrice"
+			type="Double"
+			column="fd_bottom_price"
+			notNull="false"
+			length="36"
+			validate="true" />
+
+		<simpleProperty
+			name="fdPercent"
+			messageKey="chenyee-quotecenter:chenyeeQcCustOrder.fdPercent"
+			type="Double"
+			column="fd_percent"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdUpdateTime"
+			messageKey="chenyee-quotecenter:chenyeeQcCustOrder.fdUpdateTime"
+			type="DateTime"
+			column="fd_update_time"
+			notNull="true"
+			validate="false" />
+		
+			<!-- chenyee liuxf 2018.3.16 add start  -->
+		<modelProperty
+		     name="fdProduct" 
+             column="fd_product_id" 
+             type="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcProduct" 
+             messageKey="chenyee-quotecenter:chenyeeQcRomRam.fdProductId"             
+             notNull="true"
+             validate="true"/>
+         <!-- chenyee liuxf 2018.3.16 add end  -->
+
+		<modelProperty
+			name="docCreator"
+			messageKey="chenyee-quotecenter:chenyeeQcCustOrder.docCreator"
+			type="com.landray.kmss.sys.organization.model.SysOrgElement"
+			column="doc_creator_id"
+			notNull="true"
+			validate="false" />
+
+ 
+
+ 
+	</model>
+</models>

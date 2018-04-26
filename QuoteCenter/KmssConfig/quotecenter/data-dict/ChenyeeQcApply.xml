@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models
+	xmlns="http://www.example.org/design-config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/design-config ../../../data-dict.xsd ">
+	<model
+		modelName="com.landray.kmss.chenyee.quotecenter.model.ChenyeeQcApply"
+		messageKey="chenyee-quotecenter:table.chenyeeQcApply"
+		displayProperty="fdProjectName"
+		serviceBean="chenyeeQcApplyService"
+		table="chenyee_qc_apply"
+		url="/chenyee/quotecenter/chenyee_qc_apply/chenyeeQcApply.do?method=view&amp;fdId=${fdId}">
+
+		<idProperty>
+			<generator
+				type="assigned" />
+		</idProperty>
+		
+		<simpleProperty
+			name="rfVersion"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.rfVersion"
+			type="String"
+			column="rf_version"
+			notNull="false"
+			length="36"
+			validate="false" />
+		
+		<simpleProperty
+			name="rfPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.rfPrice"
+			type="String"
+			column="rf_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+		
+		<simpleProperty
+			name="boxName"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.boxName"
+			type="String"
+			column="box_name"
+			notNull="false"
+			length="36"
+			validate="false" />
+		
+		<simpleProperty
+			name="boxPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.boxPrice"
+			type="String"
+			column="box_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+		
+		<simpleProperty
+			name="partsName"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.partsName"
+			type="String"
+			column="parts_name"
+			notNull="false"
+			length="36"
+			validate="false" />
+		
+		<simpleProperty
+			name="partsPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.partsPrice"
+			type="String"
+			column="parts_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+		
+		<simpleProperty
+			name="other"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.other"
+			type="String"
+			column="other"
+			notNull="false"
+			length="36"
+			validate="false" />
+		
+		<simpleProperty
+			name="otherPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.otherPrice"
+			type="String"
+			column="other_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+		
+		<simpleProperty
+			name="fdAndroidVersion"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdAndroidVersion"
+			type="String"
+			column="fd_android_version"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdRearCamera"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdRearCamera"
+			type="String"
+			column="fd_rear_camera"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdBatteryCapacity"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdBatteryCapacity"
+			type="String"
+			column="fd_battery_capacity"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdFrontCamera"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdFrontCamera"
+			type="String"
+			column="fd_front_camera"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdScreeSize"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdScreeSize"
+			type="String"
+			column="fd_scree_size"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdHardwarePlatform"
+			messageKey="chenyee-quotecenter:chenyeeQcProduct.fdHardwarePlatform"
+			type="String"
+			column="fd_hardware_platform"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdApplicationTitle"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdApplicationTitle"
+			type="String"
+			column="fd_application_title"
+			notNull="true"
+			length="200"
+			validate="false" />
+
+		<simpleProperty
+			name="fdProjectName"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdProjectName"
+			type="String"
+			column="fd_project_name"
+			notNull="true"
+			length="200"
+			validate="true" />
+
+		<simpleProperty
+			name="fdCustomerName"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdCustomerName"
+			type="String"
+			column="fd_customer_name"
+			notNull="true"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdRomRam"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdRomRam"
+			type="String"
+			column="fd_rom_ram"
+			notNull="true"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdMembrane"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdMembrane"
+			type="Double"
+			column="fd_membrane"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdHolster"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdHolster"
+			type="Double"
+			column="fd_holster"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdPrice"
+			type="Double"
+			column="fd_price"
+			notNull="false"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdBottomPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdBottomPrice"
+			type="Double"
+			column="fd_bottom_price"
+			notNull="true"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdCostPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdCostPrice"
+			type="Double"
+			column="fd_cost_price"
+			notNull="true"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdApplicationPrice"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdApplicationPrice"
+			type="Double"
+			column="fd_application_price"
+			notNull="true"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdApplicationTime"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdApplicationTime"
+			type="DateTime"
+			column="fd_application_time"
+			notNull="true"
+			validate="false" />
+
+		<simpleProperty
+			name="docStatus"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.docStatus"
+			type="String"
+			column="doc_status"
+			notNull="true"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdQuotePath"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdQuotePath"
+			type="String"
+			column="fd_quote_path"
+			notNull="true"
+			length="200"
+			validate="false" />
+
+		<simpleProperty
+			name="fdPresetPercent"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdPresetPercent"
+			type="Double"
+			column="fd_preset_percent"
+			notNull="true"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdApplyQuotePercent"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdApplyQuotePercent"
+			type="Double"
+			column="fd_apply_quote_percent"
+			notNull="true"
+			length="36"
+			validate="false" />
+
+		<simpleProperty
+			name="fdGm"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.fdGm"
+			type="Double"
+			column="fd_gm"
+			notNull="true"
+			length="36"
+			validate="false" />
+
+		<modelProperty
+			name="docCreator"
+			messageKey="chenyee-quotecenter:chenyeeQcApply.docCreator"
+			type="com.landray.kmss.sys.organization.model.SysOrgElement"
+			column="doc_creator_id"
+			notNull="true"
+			validate="false" />
+
+ 
+
+ 
+	</model>
+</models>
