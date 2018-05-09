@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sqlmap.UserChildMapper">
+
+<!-- 延迟加载的resultMap -->
+<resultMap type="com.po.Orders" id="OrdersUserLazyloadingRM">
+	<!-- 对订单信息进行映射配置 -->
+	<id column="id" property="id"/>
+	<result column="user_id" property="userId"/>
+	<result column="number" property="number"/>
+	<result column="createtime" property="createTime"/>
+	<result column="note" property="note"/>
+	<!-- 实现对用户信息进行延迟加载 ；
+	select：指定延迟加载需要执行的 statement 的id（是根据 user_id 查询用户信息 statement ）
+	要使用 userMapper.xml 中的 findUserById 完成根据用户id（ user_id ）来查询用户信息，
+	如果 findUserById 不在本 mapper 中要使用 namespace。
+	column：订单信息中关联用户查询的列，即 user_id。
+	关联查询的sql理解为：
+			SELECT orders.*,
+	(SELECT username FROM USER WHERE orders.user_id = user.id)username,
+	(SELECT sex FROM USER WHERE orders.user_id = user.id)sex
+	 ……
+	 FROM orders
+	-->
+	<association property="user" javaType="com.po.User" select="sqlmap.UserMapper.findUserById"  column="user_id"/>
+</resultMap>
+
+<select id="findOrdersUserLazyloading" resultMap="OrdersUserLazyloadingRM">
+	select * from orders
+</select>
+</mapper>
